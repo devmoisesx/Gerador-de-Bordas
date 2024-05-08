@@ -1,46 +1,59 @@
-const forma = document.querySelector(".forma").style;
+const square = document.querySelector(".square").style;
 const fGeometricas = document.querySelectorAll("#fGeometricas");
-const inputTodasBordas = document.querySelector("#todasBordas");
-const inputBordasSeparadas = document.querySelectorAll(".input input");
+const allBorders = document.querySelector("#borders-all");
+const separateBorders = document.querySelectorAll(".input-border");
 
 for (let formas of fGeometricas) {
-    formas.addEventListener("click", () => {
-        switch (formas.classList.value) {
-            case "quadrado":
-                forma.borderRadius = "";
-                forma.clipPath = ""
-                break;
-            case "circulo":
-                forma.borderRadius = "50%";
-                forma.clipPath = ""
-                break;
-            case "triangulo":
-                forma.borderRadius = "";
-                forma.clipPath = "polygon(0% 100%, 50% 0%, 100% 100%)"
-                break;
-        }
-    });
+  console.log(formas);
+  formas.addEventListener("click", () => {
+    switch (formas.classList.value) {
+      case "btn-square":
+        square.borderRadius = "";
+        square.clipPath = "";
+        allBorders.value = 0;
+        separateBorders.forEach((borda) => {
+          borda.value = 0;
+        });
+        break;
+      case "btn-circle":
+        square.borderRadius = "50%";
+        square.clipPath = "";
+        allBorders.value = 0;
+        separateBorders.forEach((borda) => {
+          borda.value = 0;
+        });
+        break;
+      case "btn-triangle":
+        square.borderRadius = "";
+        square.clipPath = "polygon(0% 100%, 50% 0%, 100% 100%)";
+        allBorders.value = 0;
+        separateBorders.forEach((borda) => {
+          borda.value = 0;
+        });
+        break;
+    }
+  });
 }
 
-inputTodasBordas.addEventListener("input", () => {
-    forma.borderRadius = `${inputTodasBordas.value}px`;
+allBorders.addEventListener("input", () => {
+  square.borderRadius = `${allBorders.value}px`;
 });
 
-inputBordasSeparadas.forEach((borda) => {
-    borda.addEventListener("input", () => {
-        switch (borda.id) {
-            case "topEsq":
-                forma.borderTopLeftRadius = `${borda.value}px`;
-                break;
-            case "topDir":
-                forma.borderTopRightRadius = `${borda.value}px`;
-                break;
-            case "botEsq":
-                forma.borderBottomLeftRadius = `${borda.value}px`;
-                break;
-            case "botDir":
-                forma.borderBottomRightRadius = `${borda.value}px`;
-                break;
-        }
-    });
+separateBorders.forEach((borda) => {
+  borda.addEventListener("input", () => {
+    switch (borda.id) {
+      case "topEsq":
+        square.borderTopLeftRadius = `${borda.value}px`;
+        break;
+      case "topDir":
+        square.borderTopRightRadius = `${borda.value}px`;
+        break;
+      case "botEsq":
+        square.borderBottomLeftRadius = `${borda.value}px`;
+        break;
+      case "botDir":
+        square.borderBottomRightRadius = `${borda.value}px`;
+        break;
+    }
+  });
 });

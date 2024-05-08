@@ -1,58 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Bordas</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formas CSS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class="container">
-        <div class="area-forma">
-            <div class="forma"></div>
+  <body>
+    <main class="box">
+      <div class="square"></div>
+      <article class="menu">
+        <h1>Formas CSS</h1>
+        <div class="forms">
+          <div class="btn-forms">
+            <div class="btn-square" id="fGeometricas"></div>
+          </div>
+          <div class="btn-forms">
+            <div class="btn-triangle" id="fGeometricas"></div>
+          </div>
+          <div class="btn-forms">
+            <div class="btn-circle" id="fGeometricas"></div>
+          </div>
         </div>
-        <div class="menu">
-            <h1>Formas CSS</h1>
-            <div class="formas">
-                <div class="quadrado" id="fGeometricas"></div>
-                <div class="circulo" id="fGeometricas"></div>
-                <div class="triangulo" id="fGeometricas"></div>
+
+        <div class="borders">
+          <h2>Todas as bordas</h2>
+          <!-- <label for="borders-all">Todas as bordas</label> -->
+          <input type="text" name="borders-all" id="borders-all" value="0" />
+
+          <div class="borders-separate">
+            <h2>Bordas Separadas</h2>
+            <div class="input-square">
+              <input type="text" name="topEsq" id="topEsq" class="input-border" value="0"/>
+              <input type="text" name="topDir" id="topDir" class="input-border" value="0" />
+              <input type="text" name="botEsq" id="botEsq" class="input-border" value="0" />
+              <input type="text" name="botDir" id="botDir" class="input-border" value="0" />
             </div>
-            <div class="bordas">
-                <h2>Bordas arredondadas</h2>
-                <label for="todasBordas">Todas as bordas</label>
-                <input type="number" name="todasBordas" id="todasBordas">
-
-                <div class="bordas-separadas">
-                    <h2>Bordas Separadas</h2>
-                    <div class="input">
-                        <label for="topEsq">Superior Esquerdo</label>
-                        <input type="number" name="topEsq" id="topEsq">
-
-                    </div>
-                    <div class="input">
-                        <label for="topDir">Superior Direito</label>
-                        <input type="number" name="topDir" id="topDir">
-
-                    </div>
-                    <div class="input">
-                        <label for="botEsq">Inferior Esquerdo</label>
-                        <input type="number" name="botEsq" id="botEsq">
-                    </div>
-                    <div class="input">
-                        <label for="botDir">Inferior Direito</label>
-                        <input type="number" name="botDir" id="botDir">
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </article>
     </div>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
