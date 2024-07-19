@@ -1,39 +1,36 @@
 const square = document.querySelector(".square").style;
-const fGeometricas = document.querySelectorAll("#fGeometricas");
+const squareBtn = document.querySelector("#square");
+const triangleBtn = document.querySelector("#triangle");
+const circleBtn = document.querySelector("#circle");
 const allBorders = document.querySelector("#borders-all");
 const separateBorders = document.querySelectorAll(".input-border");
 
-for (let formas of fGeometricas) {
-  console.log(formas);
-  formas.addEventListener("click", () => {
-    switch (formas.classList.value) {
-      case "btn-square":
-        square.borderRadius = "";
-        square.clipPath = "";
-        allBorders.value = 0;
-        separateBorders.forEach((borda) => {
-          borda.value = 0;
-        });
-        break;
-      case "btn-circle":
-        square.borderRadius = "50%";
-        square.clipPath = "";
-        allBorders.value = 0;
-        separateBorders.forEach((borda) => {
-          borda.value = 0;
-        });
-        break;
-      case "btn-triangle":
-        square.borderRadius = "";
-        square.clipPath = "polygon(0% 100%, 50% 0%, 100% 100%)";
-        allBorders.value = 0;
-        separateBorders.forEach((borda) => {
-          borda.value = 0;
-        });
-        break;
-    }
+squareBtn.addEventListener("click", () => {
+  square.borderRadius = "0";
+  square.clipPath = "";
+  allBorders.value = 0;
+  separateBorders.forEach((borda) => {
+    borda.value = 0;
   });
-}
+});
+
+triangleBtn.addEventListener("click", () => {
+  square.borderRadius = "0";
+  square.clipPath = "polygon(0% 100%, 50% 0%, 100% 100%)";
+  allBorders.value = 0;
+  separateBorders.forEach((borda) => {
+    borda.value = 0;
+  });
+});
+
+circleBtn.addEventListener("click", () => {
+  square.borderRadius = "50%";
+  square.clipPath = "";
+  allBorders.value = 0;
+  separateBorders.forEach((borda) => {
+    borda.value = 0;
+  });
+});
 
 allBorders.addEventListener("input", () => {
   square.borderRadius = `${allBorders.value}px`;
