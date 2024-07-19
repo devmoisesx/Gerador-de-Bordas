@@ -4,11 +4,11 @@ A ferramenta foi criada para facilitar a modificação das bordas de quadrados, 
 
 ### Fotos do Site:
 
-<img src="assets/readme/img(1).jpeg" style="width: 600px" />
+<img src="assets/readme/img%20(1).jpeg" style="width: 600px" />
 <div align="start">
-  <img src="assets/readme/img(2).jpeg" style="width: 200px" />
-  <img src="assets/readme/img(3).jpeg" style="width: 200px" />
-  <img src="assets/readme/img(4).jpeg" style="width: 200px" />
+  <img src="assets/readme/img%20(2).jpeg" style="width: 200px" />
+  <img src="assets/readme/img%20(3).jpeg" style="width: 200px" />
+  <img src="assets/readme/img%20(4).jpeg" style="width: 200px" />
 </div>
 
 ### Funcionalidades:
